@@ -1,12 +1,8 @@
-import pprint
+import json
 
-def p(v):
-    pprint.pprint(v)
+tarefas = []
 
-lista = []
-for x in range(3):
-    for y in range(3):
-        lista.append((x, y))
+with open('teste.json', 'r') as file:
+    tarefas = json.load(file)
 
-p(lista)
-print(lista)
+print(tarefas)
